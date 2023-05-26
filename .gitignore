@@ -24,4 +24,4 @@ yarn-error.log*
 
 #files
 
-/src/urls.js
+src/urls.js
