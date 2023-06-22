@@ -26,3 +26,26 @@
     right: 20px;
     width: 30px;
 }
+
+.searchicon{
+    position: fixed;
+    right: 100px;
+    top: 22px;
+    width: 30px;
+    color: gainsboro;
+}
+.bellicon{
+    position: fixed;
+    right: 170px;
+    top: 22px;
+    width: 30px;
+    color: gainsboro;
+}
+
+.bellicon:hover,
+.searchicon:hover{
+    color: white;
+    transition: all 0.4s;
+    transform: scale(1.08);
+
+}

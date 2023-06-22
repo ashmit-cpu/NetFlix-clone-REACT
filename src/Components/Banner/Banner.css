@@ -48,3 +48,7 @@
     height: 13.8rem;
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111);
 }
+.faplay,.faplus{
+    padding-right: 8px;
+
+}
