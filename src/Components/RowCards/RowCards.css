@@ -1,0 +1,61 @@
+.row {
+    margin-left: 20px;
+    color: white;
+
+}
+
+.posters {
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+.posters::-webkit-scrollbar {
+    display: none;
+}
+
+.poster {
+    max-height: 225px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+
+}
+
+.smallposter {
+    max-height: 140px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+
+}
+
+
+.smallposter:hover {
+    transform: scale(1.1);
+}
+.poster:hover{
+    transform: scale(1.06);
+}
+
+.close-button #close-button{
+    font-size: 35px;
+
+
+}
+.close-button {
+    float: right;
+    margin-right: 25px;
+    color: #181818;
+    cursor: pointer;
+    
+
+  }
+  .close-button:hover{
+    transform: scale(1.02);
+
+  }
