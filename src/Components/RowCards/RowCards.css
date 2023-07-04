@@ -36,10 +36,10 @@
 
 
 .smallposter:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .poster:hover{
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
 .close-button #close-button{
@@ -57,5 +57,26 @@
   }
   .close-button:hover{
     transform: scale(1.02);
+
+  }
+  .video-container{
+    padding-right: 10px;
+  }
+
+  @media all and (max-width: 768px){
+    .posters {
+        padding: 8px;
+        
+    }
+    .poster {
+        max-height: 155px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    
+    .smallposter {
+        max-height: 130px;
+    }
 
   }

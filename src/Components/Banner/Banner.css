@@ -2,7 +2,9 @@
     background-size: cover;
     height: 550px;
     color: white;
+    
 }
+
 
 .content{
     padding-top: 140px;
@@ -51,4 +53,27 @@
 .faplay,.faplus{
     padding-right: 8px;
 
+}
+
+
+@media all and (max-width: 768px){
+    .banner{
+        background-position: -200px;
+        
+    }
+    .content{
+        padding-left: 12px;
+    
+    }
+    
+    .title{
+        font-size: 2rem;
+    }
+
+    .description{
+        width: 19rem;
+        font-size: 0.9rem;
+    }
+    
+        
 }
