@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {API_KEY,imageUrl} from '../../constants/constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay ,faPlus} from '@fortawesome/free-solid-svg-icons';
-import './Banner.css'
+import '../../styles/Banner.css'
 import axios from '../../axios'
 
 function Banner() {

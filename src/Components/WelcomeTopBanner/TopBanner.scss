@@ -1,0 +1,260 @@
+@use '../../Partials/variables';
+
+.TopBanner {
+    position: relative;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/d282a426-b01a-424c-9b83-2c2445e4b61a/f7eb3bc2-2867-4c7e-94f8-e62ec11175cd/IN-en-20230626-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    height: 700px;
+    background-size: cover;
+
+    @media all and (max-width: 992px) {
+        height: 560px;
+    }
+
+    
+
+
+
+    .container {
+        position: relative;
+
+
+        .bg-overlay {
+            height: 700px;
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 0.9) 100%);
+
+            @media all and (max-width: 992px) {
+                height: 560px;
+            }
+
+           
+        }
+
+
+
+
+        .buttons {
+            position: absolute;
+            top: 30px;
+            right: 12%;
+            @media all and (max-width:768px){
+                right: 3%;
+            }
+
+            .dropdown {
+                position: absolute;
+                top: 0px;
+                right: 100px;
+                @media all and (max-width:768px){
+                    right: 86px;
+                }
+
+                button {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    padding: 6px 12px;
+                    font-size: 16px;
+                    display: flex;
+                    border: none;
+                    border: 1px solid rgb(138, 138, 138);
+                    border-radius: 5px;
+                    .button-text{
+                        padding: 0 10px;
+                        @media all and (max-width:578px) {
+                            display: none;
+                            
+                        }
+                    }
+                    .downicon{
+                        @media all and (max-width:578px) {
+                            padding-left:6px;
+                            
+                        }
+                    }
+
+                    &:active,
+                    &:focus {
+                        border: 2px solid rgb(219, 219, 219);
+
+                    }
+                }
+
+
+                .dropdown-content {
+                    display: none;
+                }
+            }
+
+            .dropdown.active {
+                position: absolute;
+                top: 0px;
+                right: 100px;
+                @media all and (max-width:768px){
+                    right: 86px;
+                }
+
+                .dropdown-content {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 8px;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: rgb(27, 183, 255);
+                            color: white;
+                            border-radius: 8px ;
+
+                        }
+                    }
+
+
+                }
+            }
+
+
+            .signin-btn {
+                display: inline-block;
+                text-decoration: none;
+                padding: 6px 18px;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: variables.$netflix_red;
+                color: white;
+                border-radius: 3px;
+                margin-left: 20px;
+
+                &:hover {
+                    @include variables.transition;
+                    background-color: rgb(192, 22, 22);
+                }
+
+            }
+        }
+
+
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 12%;
+            @media all and (max-width:768px){
+                left: 6%;
+            }
+
+            img {
+                width: 150px;
+                @media all and (max-width:768px){
+                    width: 100px;
+
+                }
+            }
+            
+        }
+
+        .contents {
+            color: white;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+            /* font-family: "Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif"; */
+            font-weight: 900;
+            white-space: nowrap;
+
+            @media all and (max-width: 992px) {
+                font-size: 19px;
+                font-weight: 700;
+
+            }
+
+            @media all and (max-width: 576px) {
+                white-space: normal;
+                width: 80%;
+
+            }
+
+            h2 {
+                text-align: center;
+
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 16px;
+
+                @media all and (max-width: 992px) {
+                    font-size: 18px;
+
+                }
+
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 400;
+                margin-top: 16px;
+
+                @media all and (max-width: 992px) {
+                    font-size: 18px;
+
+                }
+            }
+
+            .email-section {
+                text-align: center;
+
+
+                input {
+                    font-size: 16px;
+                    padding: 24px 16px 8px;
+                    width: 100%;
+                    min-width: 16px;
+                    max-width: 344px;
+                    margin-top: 16px;
+                    margin-right: 5px;
+                    background-color: rgba(5, 5, 5, 0.7);
+                    border: 1px solid rgb(82, 82, 82);
+                    color: white;
+                    vertical-align: center;
+
+                    @media all and (max-width: 578px) {
+                        width: 80%;
+
+                    }
+
+                }
+
+                button {
+                    @include variables.button_style;
+                    padding: 12px 24px;
+                    transform: translateY(-15%);
+                    font-size: 20px;
+                    font-weight: 500;
+                    vertical-align: center;
+
+                    .icon {
+                        padding-left: 6px;
+                    }
+
+                    @media all and (max-width: 576px) {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

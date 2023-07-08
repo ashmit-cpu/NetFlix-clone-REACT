@@ -1,0 +1,133 @@
+@use '../../Partials/variables';
+
+.SignUp {
+    position: relative;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/2f69dcef-463f-44da-b3b9-662b65f33f82/IN-en-20230703-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    height: 1000px;
+    background-size: cover;
+
+    .container {
+        position: relative;
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 3%;
+            z-index: 99;
+
+            @media all and (max-width:768px) {
+                left: 6%;
+            }
+
+            img {
+                width: 150px;
+
+                @media all and (max-width:768px) {
+                    width: 100px;
+
+                }
+            }
+
+        }
+
+        .bg-overlay {
+            height: 1000px;
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 49%, rgba(0, 0, 0, 0.6) 100%);
+
+        }
+
+        .card {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            padding: 60px 68px 40px 68px;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            border-radius: 4px;
+
+            h2 {
+                font-size: 32px;
+                font-weight: 500;
+                margin-bottom: 28px;
+            }
+
+            .btn-sign-in {
+                @include variables.button_style;
+                font-stretch: 100%;
+                margin-top: 24px;
+                margin-bottom: 12px;
+                width: 100%;
+                min-width: 98px;
+                padding: 16px;
+                font-size: 16px;
+                font-weight: 500;
+
+            }
+
+
+            .signin-section {
+                margin-top: 10px;
+
+                p {
+                    font-size: 16px;
+                    color: #b3b3b3;
+                    padding-bottom: 10px;
+
+                    .signup {
+                        color: white;
+                        font-weight: 500;
+                        margin-left: 10px;
+                        text-decoration: none;
+                    }
+
+                    .learn {
+                        color: blue;
+                        font-weight: 500;
+                        margin-left: 10px;
+                        text-decoration: none;
+
+                    }
+
+
+                }
+
+                .learn-more {
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+        .form-element {
+            position: relative;
+            margin: 0 auto;
+            padding-bottom: 16px;
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                font-family: inherit;
+                padding: 16px 20px 0 20px;
+                height: 50px;
+                font-size: 16px;
+                font-weight: 500;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                background-color: rgb(51, 51, 51);
+                color: #ffffff;
+            }
+
+
+        }
+    }
+}

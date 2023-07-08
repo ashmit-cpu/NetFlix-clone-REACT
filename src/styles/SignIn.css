@@ -1,0 +1,189 @@
+.SignIn {
+  position: relative;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/2f69dcef-463f-44da-b3b9-662b65f33f82/IN-en-20230703-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+  height: 1000px;
+  background-size: cover;
+}
+.SignIn .container {
+  position: relative;
+}
+.SignIn .container .loader {
+  display: none;
+}
+.SignIn .container .loader .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.SignIn .container .loader .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #e50914;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #e50914 transparent transparent transparent;
+}
+.SignIn .container .loader .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.SignIn .container .loader .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.SignIn .container .loader .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.SignIn .container .loader.active {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+}
+.SignIn .container .logo {
+  position: absolute;
+  top: 30px;
+  left: 3%;
+  z-index: 99;
+}
+@media all and (max-width: 768px) {
+  .SignIn .container .logo {
+    left: 6%;
+  }
+}
+.SignIn .container .logo img {
+  width: 150px;
+}
+@media all and (max-width: 768px) {
+  .SignIn .container .logo img {
+    width: 100px;
+  }
+}
+.SignIn .container .bg-overlay {
+  height: 1000px;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 49%, rgba(0, 0, 0, 0.6) 100%);
+}
+.SignIn .container .card {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  padding: 60px 68px 40px 68px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  border-radius: 4px;
+}
+.SignIn .container .card .error-message {
+  background-color: #e87c03;
+  font-size: 14px;
+  padding: 10px 20px;
+  vertical-align: center;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.SignIn .container .card h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.SignIn .container .card .btn-sign-in {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e50914;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-stretch: 100%;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  width: 100%;
+  min-width: 98px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.SignIn .container .card .btn-sign-in:hover {
+  transition: all 0.4s ease-in;
+  background-color: rgb(192, 22, 22);
+  cursor: pointer;
+}
+.SignIn .container .card .forgot-password {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+}
+.SignIn .container .card .forgot-password #checkboxId {
+  margin-right: 5px;
+  background-color: #b3b3b3;
+}
+.SignIn .container .card .signup-section {
+  margin-top: 55px;
+}
+.SignIn .container .card .signup-section p {
+  font-size: 16px;
+  color: #b3b3b3;
+  padding-bottom: 10px;
+}
+.SignIn .container .card .signup-section p .signup {
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.SignIn .container .card .signup-section p .learn {
+  color: blue;
+  font-weight: 500;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.SignIn .container .card .signup-section .learn-more {
+  font-size: 13px;
+}
+.SignIn .container .form-element {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+.SignIn .container .form-element input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(51, 51, 51);
+  color: #ffffff;
+}

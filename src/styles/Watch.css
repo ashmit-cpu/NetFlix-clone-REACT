@@ -1,0 +1,91 @@
+.Watch {
+  background-color: black;
+  margin-top: 10px;
+  color: white;
+}
+.Watch .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+@media all and (max-width: 1200px) {
+  .Watch .container {
+    justify-content: space-between;
+    padding: 80px 40px;
+  }
+}
+@media all and (max-width: 1200px) and (max-width: 992px) {
+  .Watch .container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+  }
+}
+.Watch .container .left-col {
+  width: 35%;
+  padding-right: 20px;
+}
+@media all and (max-width: 992px) {
+  .Watch .container .left-col {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media all and (max-width: 578px) {
+  .Watch .container .left-col {
+    width: 90%;
+  }
+}
+.Watch .container .left-col h2 {
+  font-size: 48px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+@media all and (max-width: 992px) {
+  .Watch .container .left-col h2 {
+    font-size: 32px;
+  }
+}
+.Watch .container .left-col p {
+  font-size: 24px;
+  padding-top: 16px;
+}
+@media all and (max-width: 992px) {
+  .Watch .container .left-col p {
+    font-size: 18px;
+    white-space: wrap;
+  }
+}
+.Watch .container .right-col {
+  position: relative;
+}
+.Watch .container .right-col .image-container {
+  position: relative;
+}
+.Watch .container .right-col img {
+  width: 450px;
+  position: relative;
+  z-index: 20;
+  top: 20px;
+}
+@media all and (max-width: 578px) {
+  .Watch .container .right-col img {
+    width: 225px;
+  }
+}
+.Watch .container .right-col video {
+  position: absolute;
+  top: 5px;
+  left: 89px;
+  width: 60%;
+  height: 73%;
+  z-index: 19;
+  object-fit: contain;
+}
+@media all and (max-width: 578px) {
+  .Watch .container .right-col video {
+    top: 5px;
+    left: 45px;
+  }
+}

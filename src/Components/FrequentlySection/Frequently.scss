@@ -1,0 +1,168 @@
+@use '../../Partials/variables';
+
+.Frequently {
+    background-color: black;
+    margin-top: 10px;
+    color: white;
+
+    .container {
+
+        padding: 80px 0;
+
+
+        @media all and (max-width: 1200px) {
+            padding: 80px 40px;
+
+            @media all and (max-width: 992px) {
+
+                padding: 80px 0;
+
+
+            }
+
+
+        }
+
+        .accordion-section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+
+
+            h2 {
+                padding-bottom: 80px;
+                font-size: 48px;
+                font-weight: 900;
+                text-align: center;
+
+                @media all and (max-width:992px) {
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+            }
+
+            .accordion {
+                color: gainsboro;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                padding: 24px;
+                margin-bottom: 10px;
+                width: 80%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 24px;
+                transition: 0.4s;
+                position: relative;
+
+                @media all and (max-width:992px) {
+                    font-size: 18px;
+                }
+
+                @media all and (max-width:578px) {
+                    width: 90%;
+
+
+                }
+
+                &:hover {
+                    background-color: #4b4a4a;
+                }
+
+                span {
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+
+
+            .panel {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.2s ease;
+                width: 80%;
+
+                @media all and (max-width:578px) {
+                    width: 90%;
+                }
+
+                p {
+                    text-align: center;
+                    padding: 5px 10px;
+                    font-size: 24px;
+
+                    @media all and (max-width:992px) {
+                        font-size: 18px;
+                    }
+
+                }
+
+
+            }
+
+            .panel.active {
+                max-height: 500px;
+                padding: 40px 0;
+                background-color: #2d2d2d;
+                margin-bottom: 5px;
+                transition: all 0.2s ease;
+
+
+            }
+        }
+
+        .email-section {
+            text-align: center;
+            padding: 50px 10px;
+            h4 {
+                font-size: 20px;
+               
+
+                @media all and (max-width:992px) {
+                    font-size: 18px;
+                }
+            }
+
+
+            input {
+                font-size: 16px;
+                padding: 24px 16px 8px;
+                width: 100%;
+                min-width: 16px;
+                max-width: 344px;
+                margin-top: 16px;
+                margin-right: 5px;
+                background-color: rgba(5, 5, 5, 0.7);
+                border: 1px solid rgb(82, 82, 82);
+                color: white;
+                vertical-align: center;
+
+                @media all and (max-width: 578px) {
+                    width: 80%;
+
+                }
+
+            }
+
+            button {
+                @include variables.button_style;
+                padding: 12px 24px;
+                transform: translateY(-15%);
+                font-size: 20px;
+                font-weight: 500;
+                vertical-align: center;
+
+                .icon {
+                    padding-left: 6px;
+                }
+
+                @media all and (max-width: 576px) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+}

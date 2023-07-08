@@ -1,0 +1,124 @@
+.SigninFooter {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  position: absolute;
+  top: 736px;
+  width: 100%;
+}
+.SigninFooter .container {
+  padding: 30px 0;
+  padding-bottom: 95px;
+}
+.SigninFooter .container h5 {
+  padding-left: 11%;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(185, 185, 185);
+}
+.SigninFooter .container .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+@media all and (max-width: 578px) {
+  .SigninFooter .container .row {
+    padding-left: 0;
+  }
+}
+.SigninFooter .container .row .col {
+  padding: 2% 8%;
+}
+@media all and (max-width: 578px) {
+  .SigninFooter .container .row .col {
+    padding: 2% 5%;
+  }
+}
+.SigninFooter .container .row .col ul {
+  list-style: none;
+}
+.SigninFooter .container .row .col ul li {
+  padding: 8px 0;
+}
+.SigninFooter .container .row .col ul li a {
+  color: rgb(133, 133, 133);
+  text-decoration: none;
+  font-size: 12px;
+}
+.SigninFooter .container .row .col ul li a:hover {
+  text-decoration: underline;
+}
+.SigninFooter .container .language-btn {
+  position: relative;
+}
+.SigninFooter .container .language-btn .dropdown {
+  position: absolute;
+  top: 0px;
+  left: 11%;
+}
+@media all and (max-width: 768px) {
+  .SigninFooter .container .language-btn .dropdown {
+    right: 86px;
+  }
+}
+.SigninFooter .container .language-btn .dropdown button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(133, 133, 133);
+  padding: 6px 12px;
+  font-size: 16px;
+  display: flex;
+  border: none;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 5px;
+}
+.SigninFooter .container .language-btn .dropdown button .button-text {
+  padding: 0 10px;
+}
+@media all and (max-width: 578px) {
+  .SigninFooter .container .language-btn .dropdown button .button-text {
+    display: none;
+  }
+}
+@media all and (max-width: 578px) {
+  .SigninFooter .container .language-btn .dropdown button .downicon {
+    padding-left: 6px;
+  }
+}
+.SigninFooter .container .language-btn .dropdown button:active, .SigninFooter .container .language-btn .dropdown button:focus {
+  border: 2px solid rgb(194, 194, 194);
+}
+.SigninFooter .container .language-btn .dropdown .dropdown-content {
+  display: none;
+}
+.SigninFooter .container .language-btn .dropdown.active {
+  position: absolute;
+  top: 0px;
+  left: 11%;
+}
+@media all and (max-width: 768px) {
+  .SigninFooter .container .language-btn .dropdown.active {
+    right: 86px;
+  }
+}
+.SigninFooter .container .language-btn .dropdown.active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+}
+.SigninFooter .container .language-btn .dropdown.active .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+.SigninFooter .container .language-btn .dropdown.active .dropdown-content a:hover {
+  background-color: rgb(27, 183, 255);
+  color: white;
+  border-radius: 8px;
+}
+.SigninFooter .container .language-btn p {
+  position: absolute;
+  top: 50px;
+  left: 11%;
+  color: rgb(133, 133, 133);
+}

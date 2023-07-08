@@ -1,0 +1,156 @@
+@use '../../Partials/variables';
+
+.Download {
+    background-color: black;
+    margin-top: 10px;
+    color: white;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0;
+
+        @media all and (max-width: 1200px) {
+            justify-content: space-between;
+            padding: 80px 40px;
+
+            @media all and (max-width: 992px) {
+                flex-direction: column-reverse;
+                justify-content: center;
+                padding: 80px 0;
+
+
+            }
+
+
+        }
+
+        .left-col {
+            position: relative;
+
+            .image-container {
+                position: relative;
+
+                img {
+                    width: 450px;
+                    position: relative;
+                    z-index: 20;
+
+                    @media all and (max-width: 578px) {
+                        width: 300px;
+
+                    }
+                }
+
+            }
+
+            .card {
+                position: absolute;
+                bottom: 26px;
+                left: 13%;
+                z-index: 66;
+                display: flex;
+                background-color: black;
+                width: 70%;
+                border: 1px solid rgb(73, 73, 73);
+                border-radius: 10px;
+
+
+                .image {
+                    z-index: 55;
+
+                    img {
+                        width: 50px;
+                        padding: 5px;
+
+                        @media all and (max-width: 578px) {
+                            width: 35px;
+
+                        }
+                    }
+                }
+
+                .contents {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    left: 15%;
+                    top: 10%;
+                    @media all and (max-width: 578px) {
+                        left: 10%;
+                    }
+
+                    .text {
+                        font-size: 14px;
+                        p {
+                            color: blue;
+                        }
+                    }
+
+
+                }
+
+                .gif {
+                    position: absolute;
+                    top: 20%;
+                    right: 3%;
+
+                    img {
+                        width: 50px;
+                        @media all and (max-width: 578px) {
+                            width: 25px;
+
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+        .right-col {
+            width: 40%;
+            padding-right: 20px;
+
+            @media all and (max-width: 992px) {
+
+                width: 80%;
+                text-align: center;
+
+            }
+
+            @media all and (max-width: 578px) {
+
+                width: 90%;
+
+            }
+
+            h2 {
+                font-size: 48px;
+                white-space: wrap;
+                font-weight: 700;
+
+                @media all and (max-width: 992px) {
+                    font-size: 32px;
+
+                }
+            }
+
+            p {
+                font-size: 24px;
+                padding-top: 16px;
+
+                @media all and (max-width: 992px) {
+                    font-size: 18px;
+                    white-space: wrap;
+
+                }
+            }
+        }
+
+    }
+
+}

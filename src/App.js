@@ -1,22 +1,39 @@
 import React from "react";
-import NavBar from "./Components/NavBar/NavBar";
-import {originals,action, trending,comedy,horror,romance,documentaries} from './urls'
-import './App.css'
-import Banner from "./Components/Banner/Banner";
-import RowCards from "./Components/RowCards/RowCards";
 
-function App() { 
+import './App.css'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from './Pages/Signup';
+import Home from "./Pages/Home"
+import Signin from "./Pages/Signin";
+import Welcome from "./Pages/Welcome";
+import { useEffect,useContext } from "react";
+import { AuthContext,FirebaseContext } from "./Store/FirebaseContext";
+
+function App() {
+  const {setUser} = useContext(AuthContext);
+  const{firebase} = useContext(FirebaseContext)
+  useEffect(()=>{
+    firebase.auth().onAuthStateChanged((user)=> {
+     setUser(user);
+    });
+  })
   return (
     <div className="App">
-      <NavBar/>
-      <Banner/>
-      <RowCards url={originals} title='NetFlix Originals'/>
-       <RowCards url={trending} title='Trending Now' isSmall />
-      <RowCards url={action} title='Action' isSmall />
-       <RowCards url={comedy} title='Comedy' isSmall />
-       <RowCards url={horror} title='Horror' isSmall />
-       <RowCards url={romance} title='Romance' isSmall />
-       <RowCards url={documentaries} title='Documentaries' isSmall />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome />}>
+          </Route>
+          <Route path="/signin" element={<Signin />}>
+          </Route>
+          <Route path="/signup" element={<Signup />}>
+          </Route>
+          <Route path="/home" element={<Home/>}>
+          </Route>
+
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

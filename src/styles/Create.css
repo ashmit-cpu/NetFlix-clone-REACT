@@ -1,0 +1,80 @@
+.Create {
+  background-color: black;
+  margin-top: 10px;
+  color: white;
+}
+.Create .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+@media all and (max-width: 1200px) {
+  .Create .container {
+    justify-content: space-between;
+    padding: 80px 40px;
+  }
+}
+@media all and (max-width: 1200px) and (max-width: 992px) {
+  .Create .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 80px 0;
+  }
+}
+.Create .container .right-col {
+  width: 35%;
+  padding-right: 20px;
+}
+@media all and (max-width: 992px) {
+  .Create .container .right-col {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media all and (max-width: 578px) {
+  .Create .container .right-col {
+    width: 90%;
+  }
+}
+.Create .container .right-col h2 {
+  font-size: 48px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+@media all and (max-width: 1400px) {
+  .Create .container .right-col h2 {
+    white-space: wrap;
+  }
+}
+@media all and (max-width: 992px) {
+  .Create .container .right-col h2 {
+    font-size: 28px;
+  }
+}
+.Create .container .right-col p {
+  font-size: 24px;
+  padding-top: 16px;
+}
+@media all and (max-width: 992px) {
+  .Create .container .right-col p {
+    font-size: 18px;
+    white-space: wrap;
+  }
+}
+.Create .container .left-col {
+  position: relative;
+}
+.Create .container .left-col .image-container {
+  position: relative;
+}
+.Create .container .left-col img {
+  width: 450px;
+  position: relative;
+  z-index: 20;
+}
+@media all and (max-width: 578px) {
+  .Create .container .left-col img {
+    width: 265px;
+  }
+}

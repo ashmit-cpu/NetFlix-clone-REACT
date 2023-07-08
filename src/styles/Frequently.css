@@ -1,0 +1,154 @@
+.Frequently {
+  background-color: black;
+  margin-top: 10px;
+  color: white;
+}
+.Frequently .container {
+  padding: 80px 0;
+}
+@media all and (max-width: 1200px) {
+  .Frequently .container {
+    padding: 80px 40px;
+  }
+}
+@media all and (max-width: 1200px) and (max-width: 992px) {
+  .Frequently .container {
+    padding: 80px 0;
+  }
+}
+.Frequently .container .accordion-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Frequently .container .accordion-section h2 {
+  padding-bottom: 80px;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
+@media all and (max-width: 992px) {
+  .Frequently .container .accordion-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+.Frequently .container .accordion-section .accordion {
+  color: gainsboro;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  padding: 24px;
+  margin-bottom: 10px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 24px;
+  transition: 0.4s;
+  position: relative;
+}
+@media all and (max-width: 992px) {
+  .Frequently .container .accordion-section .accordion {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 578px) {
+  .Frequently .container .accordion-section .accordion {
+    width: 90%;
+  }
+}
+.Frequently .container .accordion-section .accordion:hover {
+  background-color: #4b4a4a;
+}
+.Frequently .container .accordion-section .accordion span {
+  position: absolute;
+  right: 20px;
+}
+.Frequently .container .accordion-section .panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  width: 80%;
+}
+@media all and (max-width: 578px) {
+  .Frequently .container .accordion-section .panel {
+    width: 90%;
+  }
+}
+.Frequently .container .accordion-section .panel p {
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 24px;
+}
+@media all and (max-width: 992px) {
+  .Frequently .container .accordion-section .panel p {
+    font-size: 18px;
+  }
+}
+.Frequently .container .accordion-section .panel.active {
+  max-height: 500px;
+  padding: 40px 0;
+  background-color: #2d2d2d;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+.Frequently .container .email-section {
+  text-align: center;
+  padding: 50px 10px;
+}
+.Frequently .container .email-section h4 {
+  font-size: 20px;
+}
+@media all and (max-width: 992px) {
+  .Frequently .container .email-section h4 {
+    font-size: 18px;
+  }
+}
+.Frequently .container .email-section input {
+  font-size: 16px;
+  padding: 24px 16px 8px;
+  width: 100%;
+  min-width: 16px;
+  max-width: 344px;
+  margin-top: 16px;
+  margin-right: 5px;
+  background-color: rgba(5, 5, 5, 0.7);
+  border: 1px solid rgb(82, 82, 82);
+  color: white;
+  vertical-align: center;
+}
+@media all and (max-width: 578px) {
+  .Frequently .container .email-section input {
+    width: 80%;
+  }
+}
+.Frequently .container .email-section button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e50914;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 24px;
+  transform: translateY(-15%);
+  font-size: 20px;
+  font-weight: 500;
+  vertical-align: center;
+}
+.Frequently .container .email-section button:hover {
+  transition: all 0.4s ease-in;
+  background-color: rgb(192, 22, 22);
+  cursor: pointer;
+}
+.Frequently .container .email-section button .icon {
+  padding-left: 6px;
+}
+@media all and (max-width: 576px) {
+  .Frequently .container .email-section button {
+    margin-top: 30px;
+  }
+}

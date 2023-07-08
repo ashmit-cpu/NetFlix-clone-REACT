@@ -1,0 +1,67 @@
+$netflix_red: #e50914;
+
+@mixin transition {
+    transition: all 0.4s ease-in;
+}
+
+@mixin button_style {
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $netflix_red;
+    color: white;
+    border-radius: 3px;
+    border: none;
+
+    &:hover {
+        @include transition;
+        background-color: rgb(192, 22, 22);
+        cursor: pointer;
+    }
+}
+
+@mixin loading_spinner {
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid $netflix_red;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $netflix_red transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

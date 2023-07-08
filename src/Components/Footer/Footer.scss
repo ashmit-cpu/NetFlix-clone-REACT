@@ -1,0 +1,141 @@
+@use '../../Partials/variables';
+
+.Footer {
+    background-color: black;
+    margin-top: 10px;
+    color: white;
+
+    .container {
+        padding: 80px 0;
+        padding-bottom: 120px;
+
+        h5 {
+            padding-left: 11%;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(185, 185, 185);
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 2%;
+
+            @media all and (max-width:578px) {
+                padding-left: 0;
+            }
+
+            .col {
+                padding: 2% 8%;
+
+                @media all and (max-width:578px) {
+                    padding: 2% 5%;
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        padding: 8px 0;
+
+                        a {
+                            color: rgb(185, 185, 185);
+                        }
+                    }
+                }
+            }
+        }
+
+        .language-btn {
+            position: relative;
+            
+            .dropdown {
+                position: absolute;
+                top: 0px;
+                left: 11%;
+
+                @media all and (max-width:768px) {
+                    right: 86px;
+                }
+
+                button {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    padding: 6px 12px;
+                    font-size: 16px;
+                    display: flex;
+                    border: none;
+                    border: 1px solid rgb(138, 138, 138);
+                    border-radius: 5px;
+
+                    .button-text {
+                        padding: 0 10px;
+
+                        @media all and (max-width:578px) {
+                            display: none;
+
+                        }
+                    }
+
+                    .downicon {
+                        @media all and (max-width:578px) {
+                            padding-left: 6px;
+
+                        }
+                    }
+
+                    &:active,
+                    &:focus {
+                        border: 2px solid rgb(219, 219, 219);
+
+                    }
+                }
+
+
+                .dropdown-content {
+                    display: none;
+                }
+            }
+
+            .dropdown.active {
+                position: absolute;
+                top: 0px;
+                left: 11%;
+
+                @media all and (max-width:768px) {
+                    right: 86px;
+                }
+
+                .dropdown-content {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 8px;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: rgb(27, 183, 255);
+                            color: white;
+                            border-radius: 8px;
+
+                        }
+                    }
+
+
+                }
+            }
+            p{
+                position: absolute;
+                top: 50px;
+                left: 11%;
+            }
+
+        }
+
+    }
+}

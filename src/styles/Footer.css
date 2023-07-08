@@ -1,0 +1,116 @@
+.Footer {
+  background-color: black;
+  margin-top: 10px;
+  color: white;
+}
+.Footer .container {
+  padding: 80px 0;
+  padding-bottom: 120px;
+}
+.Footer .container h5 {
+  padding-left: 11%;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(185, 185, 185);
+}
+.Footer .container .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+@media all and (max-width: 578px) {
+  .Footer .container .row {
+    padding-left: 0;
+  }
+}
+.Footer .container .row .col {
+  padding: 2% 8%;
+}
+@media all and (max-width: 578px) {
+  .Footer .container .row .col {
+    padding: 2% 5%;
+  }
+}
+.Footer .container .row .col ul {
+  list-style: none;
+}
+.Footer .container .row .col ul li {
+  padding: 8px 0;
+}
+.Footer .container .row .col ul li a {
+  color: rgb(185, 185, 185);
+}
+.Footer .container .language-btn {
+  position: relative;
+}
+.Footer .container .language-btn .dropdown {
+  position: absolute;
+  top: 0px;
+  left: 11%;
+}
+@media all and (max-width: 768px) {
+  .Footer .container .language-btn .dropdown {
+    right: 86px;
+  }
+}
+.Footer .container .language-btn .dropdown button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  font-size: 16px;
+  display: flex;
+  border: none;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 5px;
+}
+.Footer .container .language-btn .dropdown button .button-text {
+  padding: 0 10px;
+}
+@media all and (max-width: 578px) {
+  .Footer .container .language-btn .dropdown button .button-text {
+    display: none;
+  }
+}
+@media all and (max-width: 578px) {
+  .Footer .container .language-btn .dropdown button .downicon {
+    padding-left: 6px;
+  }
+}
+.Footer .container .language-btn .dropdown button:active, .Footer .container .language-btn .dropdown button:focus {
+  border: 2px solid rgb(219, 219, 219);
+}
+.Footer .container .language-btn .dropdown .dropdown-content {
+  display: none;
+}
+.Footer .container .language-btn .dropdown.active {
+  position: absolute;
+  top: 0px;
+  left: 11%;
+}
+@media all and (max-width: 768px) {
+  .Footer .container .language-btn .dropdown.active {
+    right: 86px;
+  }
+}
+.Footer .container .language-btn .dropdown.active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+}
+.Footer .container .language-btn .dropdown.active .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+.Footer .container .language-btn .dropdown.active .dropdown-content a:hover {
+  background-color: rgb(27, 183, 255);
+  color: white;
+  border-radius: 8px;
+}
+.Footer .container .language-btn p {
+  position: absolute;
+  top: 50px;
+  left: 11%;
+}

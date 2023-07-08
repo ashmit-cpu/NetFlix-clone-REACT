@@ -1,0 +1,62 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    transition: all 0.3s;
+
+    .logo {
+        position: fixed;
+        left: 20px;
+        width: 80px;
+    }
+
+    .avatar {
+        position: fixed;
+        right: 20px;
+        width: 30px;
+    }
+
+    .searchicon {
+        position: fixed;
+        right: 100px;
+        top: 22px;
+        width: 30px;
+        color: gainsboro;
+
+        @media all and (max-width:578px) {
+            right: 78px;
+
+        }
+    }
+
+    .bellicon {
+        position: fixed;
+        right: 170px;
+        top: 22px;
+        width: 30px;
+        color: gainsboro;
+        @media all and (max-width:578px) {
+            right: 135px;
+
+
+        }
+    }
+
+    .bellicon:hover,
+    .searchicon:hover {
+        color: white;
+        transition: all 0.4s;
+        transform: scale(1.08);
+
+    }
+}
+
+.navbar.active {
+    background-color: #111;
+
+}
