@@ -14,13 +14,13 @@ function SignIn() {
 
 
     const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-        console.log("email changing")
+        setEmail(e.target.value.trim());
+        // console.log("email changing")
 
     }
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
-        console.log("password changing")
+        // console.log("password changing")
     }
     const handleSignin = (e) => {
         e.preventDefault();

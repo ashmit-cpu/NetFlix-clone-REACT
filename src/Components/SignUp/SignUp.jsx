@@ -39,7 +39,7 @@ function SignUp() {
         setPhoneno(e.target.value);
     };
     const handleEmailChange = (e) => {
-        setEmail(e.target.value);
+        setEmail(e.target.value.trim());
 
     };
     const handlePasswordChange = (e) => {
