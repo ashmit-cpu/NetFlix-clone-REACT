@@ -38,6 +38,11 @@
 .Footer .container .row .col ul li {
   padding: 8px 0;
 }
+@media all and (max-width: 578px) {
+  .Footer .container .row .col ul li {
+    padding: 5px 0;
+  }
+}
 .Footer .container .row .col ul li a {
   color: rgb(185, 185, 185);
 }

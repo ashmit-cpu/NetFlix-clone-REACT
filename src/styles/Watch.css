@@ -71,7 +71,7 @@
 }
 @media all and (max-width: 578px) {
   .Watch .container .right-col img {
-    width: 225px;
+    width: 260px;
   }
 }
 .Watch .container .right-col video {
@@ -86,6 +86,6 @@
 @media all and (max-width: 578px) {
   .Watch .container .right-col video {
     top: 5px;
-    left: 45px;
+    left: 49px;
   }
 }

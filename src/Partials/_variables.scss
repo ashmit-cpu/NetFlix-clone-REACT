@@ -65,3 +65,19 @@ $netflix_red: #e50914;
         }
     }
 }
+
+@mixin top_error_msg {
+    background-color: #e87c03;
+    font-size: 14px;
+    padding: 10px 20px;
+    vertical-align: center;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+@mixin validation_error {
+    color: $netflix_red;
+    margin-top: 0;
+    font-size: 14px;
+    padding: 0 5px 9px 5px;
+}

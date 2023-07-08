@@ -3,6 +3,7 @@ import Banner from "../Components/Banner/Banner";
 import RowCards from "../Components/RowCards/RowCards";
 import NavBar from "../Components/NavBar/NavBar";
 import { originals, action, trending, comedy, horror, romance, documentaries } from '../urls'
+import HomeFooter from '../Components/HomeFooter/HomeFooter';
 
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
             <RowCards url={horror} title='Horror' isSmall />
             <RowCards url={romance} title='Romance' isSmall />
             <RowCards url={documentaries} title='Documentaries' isSmall />
+            <HomeFooter/>
         </div>
     )
 }

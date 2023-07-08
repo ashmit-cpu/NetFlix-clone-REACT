@@ -9,6 +9,69 @@
     z-index: 5;
     transition: all 0.3s;
 
+    .dropdown {
+        position: absolute;
+        top: 0px;
+        right: 100px;
+
+        .dropdown-content {
+            display: none;
+        }
+    }
+
+    .dropdown.active {
+        .dropdown-content {
+            display: flex;
+            position: fixed;
+            top: 60px;
+            right: 0;
+            flex-direction: column;
+            background-color: #111;
+            border: none;
+            outline: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+                padding-bottom: 10px;
+                text-align: center;
+                display: inline-block;
+                padding: 10px 40px;
+                transition: all ease-in 0.2s;
+
+
+                &:hover {
+                    background-color: rgb(80, 80, 80);
+                    transition: all ease-in 0.2s;
+                }
+            }
+        }
+    }
+
+
+
+    .logout-btn {
+        position: fixed;
+        right: 215px;
+        width: 80px;
+        background-color: transparent;
+        color: white;
+        padding: 5px;
+        transition: all 0.4s;
+
+        @media all and (max-width:578px) {
+            right: 176px;
+
+        }
+
+        &:hover {
+            background-color: #111;
+            transition: all 0.4s;
+            cursor: pointer;
+
+        }
+    }
+
     .logo {
         position: fixed;
         left: 20px;
@@ -19,6 +82,11 @@
         position: fixed;
         right: 20px;
         width: 30px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
     }
 
     .searchicon {
@@ -40,6 +108,7 @@
         top: 22px;
         width: 30px;
         color: gainsboro;
+
         @media all and (max-width:578px) {
             right: 135px;
 

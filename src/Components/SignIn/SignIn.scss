@@ -3,8 +3,9 @@
 .SignIn {
     position: relative;
     background: url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/2f69dcef-463f-44da-b3b9-662b65f33f82/IN-en-20230703-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
-    height: 1000px;
+    height: 1100px;
     background-size: cover;
+    
 
 
     .container {
@@ -53,7 +54,7 @@
         }
 
         .bg-overlay {
-            height: 1000px;
+            height: 1100px;
             background-size: cover;
             position: relative;
             background-position: center;
@@ -75,20 +76,25 @@
             background-color: rgba(0, 0, 0, 0.75);
             color: #ffffff;
             border-radius: 4px;
+            @media all and (max-width:578px) {
+                font-size: 12px;
+
+                padding: 40px 30px 40px 30px;
+
+            }
 
             .error-message {
-                background-color: #e87c03;
-                font-size: 14px;
-                padding: 10px 20px;
-                vertical-align: center;
-                margin-bottom: 10px;
-                border-radius: 6px;
+                @include variables.top_error_msg;
             }
 
             h2 {
                 font-size: 32px;
                 font-weight: 500;
                 margin-bottom: 28px;
+                @media all and (max-width:578px) {
+                    font-size: 26px;
+
+                }
             }
 
             .btn-sign-in {
@@ -152,6 +158,9 @@
             position: relative;
             margin: 0 auto;
             padding-bottom: 16px;
+            @media all and (max-width:578px) {
+                padding-bottom: 8px;
+            }
 
             input {
                 box-sizing: border-box;

@@ -7,20 +7,23 @@ import Signup from './Pages/Signup';
 import Home from "./Pages/Home"
 import Signin from "./Pages/Signin";
 import Welcome from "./Pages/Welcome";
-import { useEffect,useContext } from "react";
-import { AuthContext,FirebaseContext } from "./Store/FirebaseContext";
+import { useEffect, useContext } from "react";
+import { AuthContext, FirebaseContext } from "./Store/FirebaseContext";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
-  const {setUser} = useContext(AuthContext);
-  const{firebase} = useContext(FirebaseContext)
-  useEffect(()=>{
-    firebase.auth().onAuthStateChanged((user)=> {
-     setUser(user);
+  const { setUser } = useContext(AuthContext);
+  const { firebase } = useContext(FirebaseContext)
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user);
     });
   })
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Welcome />}>
           </Route>
@@ -28,7 +31,7 @@ function App() {
           </Route>
           <Route path="/signup" element={<Signup />}>
           </Route>
-          <Route path="/home" element={<Home/>}>
+          <Route path="/home" element={<Home />}>
           </Route>
 
 

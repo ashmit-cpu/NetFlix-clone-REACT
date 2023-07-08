@@ -68,7 +68,7 @@
 .Frequently .container .accordion-section .panel {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease-out;
   width: 80%;
 }
 @media all and (max-width: 578px) {
@@ -91,7 +91,7 @@
   padding: 40px 0;
   background-color: #2d2d2d;
   margin-bottom: 5px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease-out;
 }
 .Frequently .container .email-section {
   text-align: center;

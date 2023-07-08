@@ -38,6 +38,11 @@
 
                     li {
                         padding: 8px 0;
+                        @media all and (max-width:578px) {
+                            padding: 5px 0;
+
+                        }
+
 
                         a {
                             color: rgb(185, 185, 185);

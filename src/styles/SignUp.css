@@ -1,11 +1,62 @@
 .SignUp {
   position: relative;
   background: url("https://assets.nflxext.com/ffe/siteui/vlv3/ce221d7a-8901-41d9-b726-3ea2efe3a650/2f69dcef-463f-44da-b3b9-662b65f33f82/IN-en-20230703-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
-  height: 1000px;
+  height: 1100px;
   background-size: cover;
 }
 .SignUp .container {
   position: relative;
+}
+.SignUp .container .loader {
+  display: none;
+}
+.SignUp .container .loader .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.SignUp .container .loader .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #e50914;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #e50914 transparent transparent transparent;
+}
+.SignUp .container .loader .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.SignUp .container .loader .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.SignUp .container .loader .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.SignUp .container .loader.active {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
 }
 .SignUp .container .logo {
   position: absolute;
@@ -27,7 +78,7 @@
   }
 }
 .SignUp .container .bg-overlay {
-  height: 1000px;
+  height: 1100px;
   background-size: cover;
   position: relative;
   background-position: center;
@@ -48,10 +99,41 @@
   color: #ffffff;
   border-radius: 4px;
 }
+@media all and (max-width: 578px) {
+  .SignUp .container .card {
+    font-size: 12px;
+    padding: 40px 30px 40px 30px;
+  }
+}
 .SignUp .container .card h2 {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 28px;
+}
+@media all and (max-width: 578px) {
+  .SignUp .container .card h2 {
+    font-size: 26px;
+  }
+}
+.SignUp .container .card .firebase_error {
+  background-color: #e87c03;
+  font-size: 14px;
+  padding: 10px 20px;
+  vertical-align: center;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+@media all and (max-width: 578px) {
+  .SignUp .container .card .firebase_error {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+.SignUp .container .card .validation {
+  color: #e50914;
+  margin-top: 0;
+  font-size: 14px;
+  padding: 0 5px 9px 5px;
 }
 .SignUp .container .card .btn-sign-in {
   display: inline-block;
@@ -64,7 +146,7 @@
   border-radius: 3px;
   border: none;
   font-stretch: 100%;
-  margin-top: 24px;
+  margin-top: 20px;
   margin-bottom: 12px;
   width: 100%;
   min-width: 98px;
@@ -85,7 +167,7 @@
   color: #b3b3b3;
   padding-bottom: 10px;
 }
-.SignUp .container .card .signin-section p .signup {
+.SignUp .container .card .signin-section p .signin {
   color: white;
   font-weight: 500;
   margin-left: 10px;
@@ -103,7 +185,12 @@
 .SignUp .container .form-element {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
+}
+@media all and (max-width: 578px) {
+  .SignUp .container .form-element {
+    padding-bottom: 8px;
+  }
 }
 .SignUp .container .form-element input {
   box-sizing: border-box;

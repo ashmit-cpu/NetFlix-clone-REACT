@@ -1,0 +1,66 @@
+.HomeFooter {
+  background-color: black;
+  margin-top: 100px;
+  color: white;
+  position: relative;
+}
+.HomeFooter .container {
+  padding: 80px 0;
+}
+.HomeFooter .container h5 {
+  padding-left: 11%;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(185, 185, 185);
+}
+.HomeFooter .container .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+@media all and (max-width: 578px) {
+  .HomeFooter .container .row {
+    padding-left: 0;
+  }
+}
+.HomeFooter .container .row .col {
+  padding: 2% 8%;
+}
+@media all and (max-width: 578px) {
+  .HomeFooter .container .row .col {
+    padding: 2% 5%;
+  }
+}
+.HomeFooter .container .row .col ul {
+  list-style: none;
+}
+.HomeFooter .container .row .col ul li {
+  padding: 8px 0;
+}
+@media all and (max-width: 578px) {
+  .HomeFooter .container .row .col ul li {
+    padding: 5px 0;
+  }
+}
+.HomeFooter .container .row .col ul li a {
+  color: rgb(185, 185, 185);
+}
+.HomeFooter .container .social-media {
+  margin-top: 40px;
+  padding-left: 4%;
+}
+@media all and (max-width: 576px) {
+  .HomeFooter .container .social-media {
+    margin-top: 20px;
+  }
+}
+.HomeFooter .container .social-media a {
+  color: gainsboro;
+  padding: 20px;
+  font-size: 18px;
+}
+.HomeFooter .container .social-media a:hover {
+  color: white;
+  transition: all 0.2s ease-in;
+}

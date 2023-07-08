@@ -1,0 +1,86 @@
+.HomeFooter {
+    background-color: black;
+    margin-top: 100px;
+    color: white;
+    position: relative;
+
+
+    .container {
+        padding: 80px 0;
+        // padding-bottom: 120px;
+
+        h5 {
+            padding-left: 11%;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(185, 185, 185);
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 2%;
+
+            @media all and (max-width:578px) {
+                padding-left: 0;
+            }
+
+            .col {
+                padding: 2% 8%;
+
+                @media all and (max-width:578px) {
+                    padding: 2% 5%;
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        padding: 8px 0;
+
+                        @media all and (max-width:578px) {
+                            padding: 5px 0;
+
+                        }
+
+
+                        a {
+                            color: rgb(185, 185, 185);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .social-media {
+            margin-top: 40px;
+            padding-left: 4%;
+
+
+
+            @media all and (max-width: 576px) {
+                margin-top: 20px;
+
+            }
+
+
+            a {
+                color: gainsboro;
+                padding: 20px;
+                font-size: 18px;
+
+                &:hover {
+                    color: white;
+                    transition: all 0.2s ease-in;
+                }
+
+            }
+
+        }
+
+
+
+    }
+}

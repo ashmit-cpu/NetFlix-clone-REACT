@@ -17,7 +17,7 @@
 }
 
 .poster {
-    max-height: 225px;
+    max-height: 205px;
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.2s;
@@ -37,10 +37,15 @@
 
 .smallposter:hover {
     transform: scale(1.05);
+    filter:brightness(80%);
+
 }
 .poster:hover{
     transform: scale(1.04);
+    filter:brightness(80%);
+
 }
+
 
 .close-button #close-button{
     font-size: 35px;
@@ -74,6 +79,7 @@
         cursor: pointer;
         transition: all 0.2s;
     }
+    
     
     .smallposter {
         max-height: 130px;

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../../styles/TopBanner.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight ,faGlobe,faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 function TopBanner() {
@@ -16,7 +17,9 @@ function TopBanner() {
 
                 </div>
                 <div className="logo">
+                <Link to="/">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="" />
+                </Link>
 
                 </div>
 
@@ -29,7 +32,8 @@ function TopBanner() {
                         </div>
 
                     </div>
-                    <a className='signin-btn' href="/signin">Sign In</a>
+                    <Link className='signin-btn' to="/signin">Sign In</Link>
+
                 </div>
                 <div className="contents">
                     <h2>Unlimited movies, TV shows and more</h2>

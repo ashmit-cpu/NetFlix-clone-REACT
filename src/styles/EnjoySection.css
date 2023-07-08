@@ -70,7 +70,7 @@
 }
 @media all and (max-width: 578px) {
   .EnjoySection .container .right-col img {
-    width: 225px;
+    width: 260px;
   }
 }
 .EnjoySection .container .right-col video {
@@ -84,7 +84,7 @@
 }
 @media all and (max-width: 578px) {
   .EnjoySection .container .right-col video {
-    top: 20px;
-    left: 30px;
+    top: 21px;
+    left: 35px;
   }
 }

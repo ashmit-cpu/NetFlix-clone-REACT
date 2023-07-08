@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import '../../styles/SignIn.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FirebaseContext } from '../../Store/FirebaseContext';
 
 
@@ -9,7 +9,7 @@ function SignIn() {
     const [password, setPassword] = useState('');
     const [errormessage, setErrormessage] = useState('')
     const [loading, setLoading] = useState(false);
-    const { firebase } = useContext(FirebaseContext)
+    const { firebase } = useContext(FirebaseContext);
     const navigate = useNavigate();
 
 
@@ -46,7 +46,9 @@ function SignIn() {
         <div className='SignIn'>
             <div className="container">
                 <div className="logo">
+                <Link to="/">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="" />
+                </Link>
 
                 </div>
                 <div className={loading?'loader active':'loader'}>
@@ -83,7 +85,7 @@ function SignIn() {
                     </form>
                     <div className="signup-section">
                         <p>New to NetFlix
-                            <a className='signup' href="/signup">Sign up</a>
+                            <Link className='signup' to="/signup">Sign up</Link>
 
                         </p>
                         <p className='learn-more'>
