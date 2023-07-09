@@ -22,7 +22,7 @@ function SignUp() {
 
     // validation variables
     const alphanumeric = /^[a-zA-Z0-9]+$/;
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const phoneRegex = /^\d+$/;
 
 
@@ -33,10 +33,16 @@ function SignUp() {
 
 
     const handleUsernameChange = (e) => {
-        setUsername(e.target.value);
+        setUsername(e.target.value.replace(/\s/g, ''));
+        if (usernameValidation) {
+            setUsernameValidation('');
+        }
     };
     const handlePhonenoChange = (e) => {
         setPhoneno(e.target.value);
+        if (phoneValidation) {
+            setPhoneValidation('');
+        }
     };
     const handleEmailChange = (e) => {
         setEmail(e.target.value.replace(/\s/g, ''));
@@ -44,19 +50,21 @@ function SignUp() {
     };
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
+        if (passwordValidation) {
+            setPasswordValidation('');
+        }
     };
 
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        setLoading(true);
 
         if (!alphanumeric.test(username)) {
             setUsernameValidation('Username should only contain letters and numbers');
             return;
         }
         if (!passwordRegex.test(password)) {
-            setPasswordValidation('Password must contain at least 8 characters,including letters and digits.');
+            setPasswordValidation('Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character');
             return;
         }
         if (!phoneRegex.test(phoneno)) {
@@ -67,6 +75,8 @@ function SignUp() {
 
 
         try {
+            setLoading(true);
+
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((result) => {
                     result.user.updateProfile({ displayName: username })
@@ -77,15 +87,15 @@ function SignUp() {
                                 phone: phoneno
                             })
                                 .then(() => {
+                                    setLoading(false);
                                     navigate('/signin')
 
                                 })
                                 .catch((error) => {
                                     // console.error('Error adding user data to Firestore:', error);
                                     setcreateUserValidation(error);
-                                })
-                                .finally(() => {
                                     setLoading(false);
+
                                 });
                         })
                         .catch((error) => {
@@ -100,18 +110,27 @@ function SignUp() {
                     setcreateUserValidation(error);
                     setLoading(false);
 
+
                 })
-                
+
+
 
         } catch (error) {
             // console.error('Error during signup:', error);
-            setcreateUserValidation(error);
+            setcreateUserValidation(error.message);
             setLoading(false);
 
         };
 
 
 
+    };
+
+    // Clear the error message when it is no longer relevant
+    const clearErrorMessage = () => {
+        if (createUserValidation) {
+            setcreateUserValidation('');
+        }
     };
 
 
@@ -155,7 +174,7 @@ function SignUp() {
                             <input type="text" name="phoneno" id="phoneno" value={phoneno} placeholder='Phone Number' onChange={handlePhonenoChange} required />
                         </div>
                         {phoneValidation && <p className='validation'>{phoneValidation}</p>}
-                        <button type='submit' className="btn-sign-in">Sign Up</button>
+                        <button type='submit' className="btn-sign-in" onClick={clearErrorMessage}>Sign Up</button>
                     </form>
                     <div className="signin-section">
                         <p>Already have an account?
