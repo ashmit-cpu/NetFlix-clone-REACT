@@ -37,13 +37,13 @@ function HomeFooter() {
 
                 </div>
                 <div className="social-media">
-                    <a href="https://www.facebook.com/profile.php?id=100008369855021" target="_blank"><span class="social-media"><i
+                    <a href="https://www.facebook.com/profile.php?id=100008369855021" target="_blank"rel="noopener noreferrer"><span class="social-media"><i
                         class="fa-brands fa-facebook"></i></span></a>
-                    <a href="https://instagram.com/ashmithkacheri?igshid=ZDdkNTZiNTM=" target="_blank"><span class="social-media"><i
+                    <a href="https://instagram.com/ashmithkacheri?igshid=ZDdkNTZiNTM=" target="_blank"rel="noopener noreferrer"><span class="social-media"><i
                         class="fa-brands fa-instagram"></i></span></a>
-                    <a href="https://github.com/ashmit-cpu"><span class="social-media" target="_blank"><i
+                    <a href="https://github.com/ashmit-cpu"><span class="social-media" target="_blank"rel="noopener noreferrer"><i
                         class="fa-brands fa-github"></i></span></a>
-                    <a href="https://www.linkedin.com/in/ashmit-kacheri-492310264/" target="_blank"><span class="social-media"><i
+                    <a href="https://www.linkedin.com/in/ashmit-kacheri-492310264/" target="_blank"rel="noopener noreferrer"><span class="social-media"><i
                         class="fa-brands fa-linkedin"></i></span></a>
                 </div>
 

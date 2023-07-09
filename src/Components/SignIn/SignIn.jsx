@@ -14,7 +14,7 @@ function SignIn() {
 
 
     const handleEmailChange = (e) => {
-        setEmail(e.target.value.trim());
+        setEmail(e.target.value.replace(/\s/g, ''));
         // console.log("email changing")
 
     }
