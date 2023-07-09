@@ -63,7 +63,7 @@ function SignUp() {
             setPhoneValidation('Please enter a phone number consisting of digits only');
             return;
         }
-        
+
 
 
         try {
@@ -83,31 +83,34 @@ function SignUp() {
                                 .catch((error) => {
                                     // console.error('Error adding user data to Firestore:', error);
                                     setcreateUserValidation(error);
+                                })
+                                .finally(() => {
+                                    setLoading(false);
                                 });
                         })
                         .catch((error) => {
                             // console.error('Error updating user profile:', error);
                             setcreateUserValidation(error);
+                            setLoading(false);
+
                         });
                 })
                 .catch((error) => {
                     // console.error('Error creating user:', error);
                     setcreateUserValidation(error);
+                    setLoading(false);
 
                 })
-                .finally(() => {
-                    setLoading(false);
-                });
                 
-                
+
         } catch (error) {
             // console.error('Error during signup:', error);
             setcreateUserValidation(error);
             setLoading(false);
 
         };
-        
-        
+
+
 
     };
 
@@ -117,12 +120,12 @@ function SignUp() {
         <div className='SignUp'>
             <div className="container">
                 <div className="logo">
-                <Link to="/">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="" />
-                </Link>
+                    <Link to="/">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="" />
+                    </Link>
 
                 </div>
-                <div className={loading?'loader active':'loader'}>
+                <div className={loading ? 'loader active' : 'loader'}>
                     <div className="lds-ring">
                         <div></div>
                         <div></div>
@@ -158,7 +161,7 @@ function SignUp() {
                         <p>Already have an account?
                             <Link className='signin' to="/signin">Sign In</Link>
 
-                            
+
                         </p>
 
                     </div>
